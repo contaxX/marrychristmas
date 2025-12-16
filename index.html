@@ -303,8 +303,7 @@
 
   /* Sequenz: rein -> in Mitte stoppen -> Schlitten weg */
   body.opening .flyby{
-  animation:flyIn 2.6s cubic-bezier(.15,.95,.2,1) forwards;
-  }
+    animation:flyIn 1.25s cubic-bezier(.2,1,.25,1) forwards;
   }
   @keyframes flyIn{
     to{left:50%; transform:translate(-50%,-50%);}
@@ -316,8 +315,7 @@
     transform:translate(-50%,-50%);
   }
   body.detached .sleigh{
-  animation:sleighOut 2.2s cubic-bezier(.4,0,.2,1) forwards;
-  }
+    animation:sleighOut .85s cubic-bezier(.2,1,.25,1) forwards;
   }
   @keyframes sleighOut{
     to{transform:translateX(70vw) translateY(-10px); opacity:0;}
@@ -593,13 +591,13 @@
     // In der Mitte: Schlitten fliegt weiter, Karte bleibt (Illusion)
     setTimeout(() => {
       document.body.classList.add("detached");
-    }, 2800);
+    }, 1350);
 
     // Finale Karte einblenden
     setTimeout(() => {
       document.body.classList.add("revealed");
       revealFinalCard();
-    }, 4200);
+    }, 1850);
   });
 
   // Optional: erster Klick irgendwo soll auch reichen (Fallback)
